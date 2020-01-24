@@ -1,5 +1,5 @@
 # Ron-Burgundy
-These files read Biosemi data in BDF format. There are 3 optons:
+These files read Biosemi data in BDF format. There are 3 options:
 
 1) extract_data_biosemi: this file is written in Matlab
 
