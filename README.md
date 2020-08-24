@@ -8,4 +8,4 @@ These files read Biosemi data in BDF format. There are 3 options:
 
 These files are part of a large GUI that I am using to analyze EEG and MEG data.
 
-If you have any question and/or want to report bugs, please e-mail me (Alex) at: pressalex@hotmail.com
+If you have any question and/or want to report bugs, please e-mail me (Ale) at: pressalex@hotmail.com
