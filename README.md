@@ -6,6 +6,6 @@ These files read Biosemi data in BDF format. There are 3 options:
 
 3) C++: this folder contains the file "Read_BDF.cpp", the executable file "Read_BDF" and the TDS file "Read_BDF".
 
-These files are part of a large GUI that I am using to analyze EEG and MEG data.
+The Matlab and MEX files are part of a large GUI that I am using to analyze EEG and MEG data.
 
 If you have any question and/or want to report bugs, please e-mail me (Ale) at: pressalex@hotmail.com
