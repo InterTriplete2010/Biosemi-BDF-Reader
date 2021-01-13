@@ -511,7 +511,7 @@ if (!flag_invalid_name)
 
 	rbd.read_triggers(vect_trig,srate*s_data);	//Now extract the latency and trigger code for each event;
 
-	system("pause"); 
+	//system("pause"); 
 
 }
 //return 0;
