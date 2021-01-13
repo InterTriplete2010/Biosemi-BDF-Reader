@@ -505,7 +505,7 @@ rbd.read_info_bdf(buff_char,buff_int,name_bdf_char);	//Read the information from
 if (s_data == -1)
 {
 
-        cout << "\nThe number of samples was not read correctly and returned a value of -1. It is likely that the file is too big for the RAM and it cannot be opened on this computer. The operation has been aborted\n";
+        cout << "\nThe number of duration of the recording was not read correctly and returned a value of -1. It is likely that the file is too big for the RAM and it cannot be opened on this computer. The operation has been aborted\n";
 
         return 0;
 
