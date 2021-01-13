@@ -502,6 +502,15 @@ strcpy(name_bdf_char,name_bdf.c_str());	//Convert string to char. c_str() conver
 
 rbd.read_info_bdf(buff_char,buff_int,name_bdf_char);	//Read the information from the header file
 
+if (s_data == -1)
+{
+
+        cout << "\nThe file is too big and cannot be opened on this computer. The computer ran out of memory\n";
+
+        return 0;
+
+}
+	    
 if (!flag_invalid_name)
 {
 
