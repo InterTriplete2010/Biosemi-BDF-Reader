@@ -297,7 +297,7 @@ track_pointer++;
 	//Clear the memory
 	delete [] matrix_data_c2;
 	//cout << "\n" << "Sample: " << matrix_data_compl_2[0][0] << "\n";
-	cout << "Extraction of data completed" << "\n";
+	cout << "\nExtraction of data completed" << "\n";
 	//cout << "\nTrack pointer: " << track_pointer;	//Used for debugging;
 }
 //*********************************************************************************************//
