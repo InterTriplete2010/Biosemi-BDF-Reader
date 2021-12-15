@@ -5,7 +5,7 @@
 %% See these links for a description of the BDF (https://www.biosemi.com/faq/file_format.htm)
 %% and EDF (https://edfrw.readthedocs.io/en/latest/specifications.html) format
 
-%Biosemi range: 524 mV (-262,144 to +262,143 µV) (http://psychophysiology.cpmc.columbia.edu/Software/PolyRex/faq.html)
+%Biosemi range: 524 mV (-262,144 to +262,143 ÂµV) (http://psychophysiology.cpmc.columbia.edu/Software/PolyRex/faq.html)
 
 % Description of the BDF Header:	
 %1) 8 bytes	Byte 1: "255" (non ascii)	Byte 1: "0" (ASCII)	Identification code
@@ -275,6 +275,7 @@ end
  min_dig = -str2double(min_dig_temp((track_index(1) + 1:track_index(2) - 1)));
  
  EEG.resolution = (max_physic - min_physic)/(max_dig - min_dig);
+ offset = max_physic - EEG.resolution*max_dig;
  
  %Step 18
 %Read Nchannels*80 bytes (ASCII)
@@ -383,7 +384,7 @@ end
 
          temp_data_24_bit = reshape(temp_data,3,length(temp_data)/3)'*2.^[0;8;16]; %+ min_physic(1);   %Data are saved into 24 bits, Little Endian (see the structure of the data in the documentation)
       temp_data_24_bit = temp_data_24_bit - 2^24*(temp_data_24_bit>=2^23);  %Complement 2 conversion 
-       temp_data_24_bit = temp_data_24_bit.*EEG.resolution;
+       temp_data_24_bit = temp_data_24_bit.*EEG.resolution + offset;
        
        %temp_data_24_bit = temp_data_24_bit + min_physic(1);
        
