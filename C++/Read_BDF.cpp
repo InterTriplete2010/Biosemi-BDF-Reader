@@ -265,13 +265,13 @@ temp_sample = byte_1 + byte_2*pow(2,8) + byte_3*pow(2,16);
 if (temp_sample >= pow(2,23))
 {
 	
-	matrix_data_compl_2[ll][track_pointer] = (temp_sample - pow(2,24))*res_data;
+	matrix_data_compl_2[ll][track_pointer] = (temp_sample - pow(2,24))*res_data + offset;
 	
 }
 
 else{
 	
-matrix_data_compl_2[ll][track_pointer] = temp_sample*res_data;
+matrix_data_compl_2[ll][track_pointer] = temp_sample*res_data + offset;
 
 }
 
