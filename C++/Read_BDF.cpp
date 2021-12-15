@@ -166,6 +166,7 @@ double max_dig = (double)atoi(buffer);
 cout << "Digital maximum(Nx8 bytes): " << buffer <<"\n";
 
 res_data = (max_physic - min_physic)/(max_dig - min_dig);	//Resolution of the data;
+	offset = max_physic - res_data*max_dig;
 //cout << "Resolution data: " << res_data << "\n";
 //Nx80 bytes: Pre-filtering
 fread(buffer, n_chan, 80, file_data); 
