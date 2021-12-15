@@ -21,6 +21,7 @@ int srate;
 int n_chan;
 int s_data;
 double res_data;
+double offset;
 
 int bytes_data = 3;
 int **matrix_data;	//Matrix where to save the EEG data;
