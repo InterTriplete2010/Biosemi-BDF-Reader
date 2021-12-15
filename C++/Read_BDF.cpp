@@ -30,6 +30,7 @@ int srate;
 int n_chan;
 int s_data;
 double res_data;
+double offset;
 bool flag_invalid_name = false;
 
 int bytes_data = 3;
