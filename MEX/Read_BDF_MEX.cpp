@@ -385,13 +385,13 @@ fseek (file_data,(n_chan + 1)*256 + (kk - 1)*srate_int*bytes_data,SEEK_SET);	//P
 {
 	
 	
-	temp_bdf_c2[track_data_c2] = (temp_sample - pow(2,24))*res_data;
+	temp_bdf_c2[track_data_c2] = (temp_sample - pow(2,24))*res_data + offset;
 	
 }
 
 else{
 	
-temp_bdf_c2[track_data_c2] = temp_sample*res_data;
+temp_bdf_c2[track_data_c2] = temp_sample*res_data + offset;
 
 }
 
