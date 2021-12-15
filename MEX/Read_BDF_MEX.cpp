@@ -268,6 +268,7 @@ byte_18 = mxCreateDoubleMatrix(1, 1, mxREAL);
 	temp_byte_d[0] = *temp_pointer_d;
 
 res_data = (max_physic - min_physic)/(max_dig - min_dig);	//Resolution of the data;
+	offset = max_physic - res_data*max_dig
 res_data_output = mxCreateDoubleMatrix(1, 1, mxREAL);
 	temp_byte_d = mxGetPr(res_data_output);
 	temp_pointer_d = &res_data;
