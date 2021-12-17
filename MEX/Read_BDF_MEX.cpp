@@ -21,7 +21,7 @@ int srate;
 int n_chan;
 int s_data;
 double res_data;
-double offset;
+//double offset;
 
 int bytes_data = 3;
 int **matrix_data;	//Matrix where to save the EEG data;
@@ -268,7 +268,7 @@ byte_18 = mxCreateDoubleMatrix(1, 1, mxREAL);
 	temp_byte_d[0] = *temp_pointer_d;
 
 res_data = (max_physic - min_physic)/(max_dig - min_dig);	//Resolution of the data;
-	offset = max_physic - res_data*max_dig
+	//offset = max_physic - res_data*max_dig
 res_data_output = mxCreateDoubleMatrix(1, 1, mxREAL);
 	temp_byte_d = mxGetPr(res_data_output);
 	temp_pointer_d = &res_data;
@@ -385,13 +385,13 @@ fseek (file_data,(n_chan + 1)*256 + (kk - 1)*srate_int*bytes_data,SEEK_SET);	//P
 {
 	
 	
-	temp_bdf_c2[track_data_c2] = (temp_sample - pow(2,24))*res_data + offset;
+	temp_bdf_c2[track_data_c2] = (temp_sample - pow(2,24))*res_data; //+ offset;
 	
 }
 
 else{
 	
-temp_bdf_c2[track_data_c2] = temp_sample*res_data + offset;
+temp_bdf_c2[track_data_c2] = temp_sample*res_data; //+ offset;
 
 }
 
