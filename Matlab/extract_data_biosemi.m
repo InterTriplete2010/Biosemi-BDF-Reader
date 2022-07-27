@@ -305,7 +305,8 @@ end
      
  end
  
- sampl_freq_data = str2double(sampl_freq_data_char(1:track_index - 1));
+ %sampl_freq_data = str2double(sampl_freq_data_char(1:track_index - 1));
+ sampl_freq_data = str2double(sampl_freq_data_char(1:track_index - 1))./str2double(EEG.byte_9);
  
  EEG.srate = sampl_freq_data;
  EEG.pnts = EEG.srate*str2double(cell2mat(EEG.byte_8)); 
