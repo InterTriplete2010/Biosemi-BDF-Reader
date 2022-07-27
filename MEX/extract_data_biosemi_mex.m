@@ -51,7 +51,7 @@
 
 %21) N x 32 bytes	(ASCII) Reserved
 
-function EEG  = extract_data_biosemi(BDF_file_selected,reference_channel)
+function EEG  = extract_data_biosemi_mex(BDF_file_selected,reference_channel)
 
 EEG = [];
 
