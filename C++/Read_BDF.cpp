@@ -26,6 +26,7 @@ class read_bdf_data{
 //*********************************************************************************************//
 //Global variables
 
+int dur_data;
 int srate;
 int n_chan;
 int s_data;
@@ -118,7 +119,8 @@ s_data = atoi(buffer);
 fread(buffer, 1, 8, file_data); 
 buffer[8] = '\0';
 cout << "Duration of data record, in seconds(8 bytes): " << buffer << "\n";
-
+dur_data = atoi(buffer);
+	
 //4 bytes: Number of channels in data record
 fread(buffer, 1, 4, file_data); 
 buffer[4] = '\0';
@@ -199,7 +201,7 @@ track_srate++;
 }
 
 //cout << "Test: " << srate_char;	//Used in debug mode to check that the correct sampling frequency has been extracted
-srate = atoi(srate_char);	//Convert the array of characters with the sampling frequency into an integer;
+srate = atoi(srate_char)/dur_data;	//Convert the array of characters with the sampling frequency into an integer;
 //cout << "Test: " << srate << "\n";
 delete [] srate_char; //free memory previously allocated for this array;
 
