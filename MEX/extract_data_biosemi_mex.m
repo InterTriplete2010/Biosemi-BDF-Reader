@@ -6,7 +6,7 @@
 %% See these links for a description of the BDF (https://www.biosemi.com/faq/file_format.htm)
 %% and EDF (https://edfrw.readthedocs.io/en/latest/specifications.html) format
 
-%Biosemi range: 524 mV (-262,144 to +262,143 µV) (http://psychophysiology.cpmc.columbia.edu/Software/PolyRex/faq.html)
+%Biosemi range: 524 mV (-262,144 to +262,143 ÂµV) (http://psychophysiology.cpmc.columbia.edu/Software/PolyRex/faq.html)
 
 % Description of the BDF Header:	
 %1) 8 bytes	Byte 1: "255" (non ascii)	Byte 1: "0" (ASCII)	Identification code
@@ -104,7 +104,7 @@ end
 
 EEG.resolution = res_data;
  
-sampl_freq_data = double(sampl_freq);
+sampl_freq_data = double(sampl_freq)./str2double(byte_10);
 EEG.srate = sampl_freq_data;
 EEG.pnts = EEG.srate*double(data_duration); 
 EEG.data = double(data_bdf_c2);
