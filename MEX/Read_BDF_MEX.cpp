@@ -439,7 +439,7 @@ else{
 			
 		if (track_trig > 0){
 			
-		if (((temp_trig_data[count_samples - 2] != 0) || (temp_trig_data[count_samples - 1] != 0)) && (((temp_trig_data[count_samples - 2] - temp_trig_data[count_samples - 5]) !=0) ||  ((temp_trig_data[count_samples - 1] - temp_trig_data[count_samples - 4])!= 0))){
+		if (((temp_trig_data[count_samples - 2] != 0) || (temp_trig_data[count_samples - 1] != 0)) && (((temp_trig_data[count_samples - 2] - temp_trig_data[count_samples - 5]) > 0) ||  ((temp_trig_data[count_samples - 1] - temp_trig_data[count_samples - 4]) > 0))){
 			
 		temp_trig_data_event[track_trig] = temp_trig_data[count_samples - 2] + temp_trig_data[count_samples - 1]*pow(2,8);
 		temp_trig_data_latency[track_trig] = (count_samples + 1)/bytes_data;
