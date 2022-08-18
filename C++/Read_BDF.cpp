@@ -359,7 +359,7 @@ for (int kk = 0; kk < length_trig_vect; kk++){
 
 if (kk > 0){
 	
-if ((temp_first_8b[kk] != 0 || temp_second_8b[kk] != 0) && (((temp_first_8b[kk] - temp_first_8b[kk - 1])!= 0) || (temp_second_8b[kk] - temp_second_8b[kk - 1])!= 0)){
+if ((temp_first_8b[kk] != 0 || temp_second_8b[kk] != 0) && (((temp_first_8b[kk] - temp_first_8b[kk - 1]) > 0) || (temp_second_8b[kk] - temp_second_8b[kk - 1]) > 0)){
 	
 	matrix_trig[track_pointer][0] = kk + 1;	//The latency is saved in samples. One has been added to compensate for the fact that C++ starts the first index from 0;
 	matrix_trig[track_pointer][1] = temp_first_8b[kk] + temp_second_8b[kk]*pow(2,8);	//Trigger code;
