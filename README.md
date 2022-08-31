@@ -6,11 +6,11 @@ These files read Biosemi data in BDF format. There are 3 options:
 
 3) C++: this folder contains the filee BDF_Reader.h, BDF_Reader_H.cpp and Test_BDF_Reader.cpp, which can be used to test the code. There are 3 public methods that need to be executed in the following order:
 
-A) std::vector<std::vector<double>> rbd.read_data_bdf(File_Name): it returns the EEG data and add an additional channel at the end that can be used as a time domain. "File_Name" needs to be replaced with the name of the bdf file that you want to open;
+    A) std::vector<std::vector<double>> rbd.read_data_bdf(File_Name): it returns the EEG data and add an additional channel at the end that can be used as a time domain.         "File_Name" needs to be replaced with the name of the bdf file that you want to open;
 
-B) std::vector<std::vector<double>> rbd.read_triggers(): it returns the triggers and convert them into time;
+    B) std::vector<std::vector<double>> rbd.read_triggers(): it returns the triggers and convert them into time;
 
-C) std::string rbd.return_labels_sensors(): it returns the name of the sensors;
+    C) std::string rbd.return_labels_sensors(): it returns the name of the sensors;
 
 The Matlab and MEX files are part of a large Toolbox that I wrote and that I am using to analyze EEG and MEG data.
 
