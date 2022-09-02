@@ -8,7 +8,7 @@ These files read Biosemi data in BDF format. There are 3 options:
 
     A) std::vector<std::vector<double>> rbd.read_data_bdf(File_Name): it returns the EEG data and add an additional channel at the end that can be used as a time domain.         "File_Name" needs to be replaced with the name of the bdf file that you want to open;
 
-    B) std::vector<std::vector<double>> rbd.read_triggers(): it returns the triggers and convert them into time;
+    B) std::vector<std::vector<double>> rbd.read_triggers(): it returns the latency expressed in seconds (1st column) and code (2nd column) of the triggers 
 
     C) std::string rbd.return_labels_sensors(): it returns the name of the sensors;
 
