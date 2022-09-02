@@ -405,7 +405,7 @@ std::vector<std::vector<double>> BDF_Reader::read_triggers()
 
 					matrix_trig.push_back(temp_v);
 
-					matrix_trig[track_pointer][0] = (double)(track_count_triggers) / srate - 1/(double)srate;	//The latency is saved in samples. One has been added to compensate for the fact that C++ starts the first index from 0;
+					matrix_trig[track_pointer][0] = (double)(track_count_triggers) / srate - 1/(double)srate;	//The latency is saved in seconds;
 					matrix_trig[track_pointer][1] = byte_1[1] + byte_2[1] * pow(2, 8);	//Trigger code;
 
 					track_pointer++;
