@@ -1,4 +1,4 @@
-These files read Biosemi data in BDF format. Please, keep in mind that I am following the current format of the bdf file, as reported in Biosemi's website. This means that my code assumes that the data are read every 1 second. If the format changes and I am not aware of that, please contact me and I will make the appropriate changes.
+These files read Biosemi data in BDF format. Please, keep in mind that I am following the current format of the BDF file, as reported in Biosemi's website. This means that my code assumes that the data are read every 1 second. If the format changes and I am not aware of that, please contact me and I will make the appropriate changes.
 
 There are 3 options:
 
