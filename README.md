@@ -1,4 +1,6 @@
-These files read Biosemi data in BDF format. There are 3 options:
+These files read Biosemi data in BDF format. Please, keep in mind that I am following the current format of the bdf file, as reported in Biosemi's website. This means that my code assumes that the data are read every 1 second. If the format changes and I am not aware of that, please contact me and I will make the appropriate changes.
+
+There are 3 options:
 
 1) Matlab: this folder contains the matlab function "extract_data_biosemi". This function takes two input: 1) the name of the BDF file to open and 2) the refernce channel(s) expressed in number (position). If more than one reference channel is used, the function will average the N channels entered. The function handles the special module 9 "ABR", which does not require a reference channel. In this case, the user needs to enter "0". The polarity will also be adjusted to have Cz - Average channeles. The function will return one ouput (e.g. EEG), which stores all the key info data read from the bdf file, such as the EEG data, the sampling frequency, etc.
 
