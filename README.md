@@ -16,4 +16,4 @@ There are 3 options:
 
 The Matlab and MEX files are part of a large Toolbox that I wrote and that I am using to analyze EEG and MEG data.
 
-If you have any question and/or want to report bugs, please e-mail me (Ale) at: pressalex@hotmail.com
+If you have any questions and/or want to report bugs, please e-mail me (Ale) at: pressalex@hotmail.com
